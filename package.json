@@ -1,0 +1,25 @@
+{
+  "name": "a9-observability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CIS4930 A9 Express and MongoDB telemetry with OpenTelemetry and Jaeger",
+  "main": "index.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node --require ./tracing.js index.js",
+    "start:console": "node --require ./tracing-console.js index.js",
+    "exercise": "node scripts/exercise.js"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.9.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.200.0",
+    "@opentelemetry/instrumentation-http": "0.200.0",
+    "@opentelemetry/instrumentation-mongodb": "0.53.0",
+    "@opentelemetry/resources": "2.0.0",
+    "@opentelemetry/sdk-metrics": "2.0.0",
+    "@opentelemetry/sdk-node": "0.200.0",
+    "@opentelemetry/sdk-trace-base": "2.0.0",
+    "express": "5.1.0",
+    "mongodb": "4.17.2"
+  }
+}

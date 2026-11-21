@@ -1,0 +1,22 @@
+services:
+  mongo:
+    image: mongo:7.0.14
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - todo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  jaeger:
+    image: jaegertracing/jaeger:2.5.0
+    ports:
+      - "127.0.0.1:16686:16686"
+      - "127.0.0.1:4317:4317"
+      - "127.0.0.1:4318:4318"
+      - "127.0.0.1:5778:5778"
+      - "127.0.0.1:9411:9411"
+volumes:
+  todo-data:
