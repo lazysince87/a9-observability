@@ -116,10 +116,15 @@ async function run() {
   browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   page.setDefaultTimeout(15000);
-  await page.goto('http://127.0.0.1:16686/search');
-  await page.getByRole('combobox').first().click();
-  await page.getByText('todo-service', { exact: true }).last().click();
-  await page.getByRole('button', { name: 'Find Traces', exact: true }).click();
+  // Jaeger's search state is encoded in its URL. Use the same search route
+  // produced by the UI so the service selection and result count are visible.
+  const end = Date.now() * 1000;
+  const search = new URLSearchParams({
+    service: 'todo-service', limit: '20', lookback: '1h',
+    end: String(end), start: String(end - 3600000000),
+    maxDuration: '', minDuration: '',
+  });
+  await page.goto(`http://127.0.0.1:16686/search?${search}`);
   await page.getByRole('heading', { name: /8 Traces/ }).waitFor();
   await page.screenshot({ path: path.join(output, 'jaeger-search.jpg'), type: 'jpeg', quality: 94 });
 
