@@ -1,0 +1,24 @@
+{
+  "execution": "Docker containers on a GitHub-hosted Ubuntu runner",
+  "repository": "lazysince87/a9-observability",
+  "commit": "9dce1f799f2aca3aa2d2668d92733e5c5e012293",
+  "workflow_run_id": "44860072799",
+  "captured_at": "2026-11-21T03:15:46.948Z",
+  "mongodb_image": "mongo:7.0.14",
+  "jaeger_image": "jaegertracing/jaeger:2.5.0",
+  "request_count": 8,
+  "response_counts": {
+    "200": 6,
+    "400": 1,
+    "404": 1
+  },
+  "selected_trace_id": "678f0efa1d9ac724315608969ecd9d64",
+  "http_duration_ms": 7.801,
+  "database_duration_ms": 1.353,
+  "database": "todo",
+  "collection": "todos",
+  "console_stage_verified": true,
+  "spans_and_parent_references_verified": true,
+  "request_logs_correlated_with_traces": true,
+  "metrics_export_verified": true
+}

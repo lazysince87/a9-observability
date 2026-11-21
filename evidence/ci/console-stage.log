@@ -1,0 +1,297 @@
+{"event":"telemetry_started","traces":"console","metrics":"console","logs":"structured JSON console"}
+{"event":"server_started","port":3000,"service":"todo-service"}
+{
+  resource: {
+    attributes: {
+      'host.name': 'ip-10-0-131-216',
+      'host.arch': 'amd64',
+      'host.id': 'ec270f328f8798eb144d5a22dc86da72',
+      'process.pid': 4219,
+      'process.executable.name': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.executable.path': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.command_args': [
+        '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+        '--require',
+        './tracing-console.js',
+        '/home/runner/work/a9-observability/a9-observability/index.js'
+      ],
+      'process.runtime.version': '22.23.5',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/runner/work/a9-observability/a9-observability/index.js',
+      'process.owner': 'runner',
+      'service.name': 'todo-service',
+      'service.version': '1.0.0',
+      'deployment.environment.name': 'local'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-mongodb',
+    version: '0.53.0',
+    schemaUrl: undefined
+  },
+  traceId: '2ac745c2421478134bad864665fd52d8',
+  parentSpanContext: {
+    traceId: '2ac745c2421478134bad864665fd52d8',
+    spanId: 'efbea583e96638c6',
+    traceFlags: 1,
+    traceState: undefined
+  },
+  traceState: undefined,
+  name: 'mongodb.find',
+  id: 'a698714092b011ba',
+  kind: 2,
+  timestamp: 1795230941721000,
+  duration: 1300.629,
+  attributes: {
+    'db.system': 'mongodb',
+    'db.name': 'todo',
+    'db.mongodb.collection': 'todos',
+    'db.operation': 'find',
+    'db.connection_string': 'mongodb://127.0.0.1:27017/todo',
+    'net.peer.name': '127.0.0.1',
+    'net.peer.port': 27017,
+    'db.statement': '{"find":"?","filter":{},"projection":{"_id":"?"}}'
+  },
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'host.name': 'ip-10-0-131-216',
+      'host.arch': 'amd64',
+      'host.id': 'ec270f328f8798eb144d5a22dc86da72',
+      'process.pid': 4219,
+      'process.executable.name': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.executable.path': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.command_args': [
+        '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+        '--require',
+        './tracing-console.js',
+        '/home/runner/work/a9-observability/a9-observability/index.js'
+      ],
+      'process.runtime.version': '22.23.5',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/runner/work/a9-observability/a9-observability/index.js',
+      'process.owner': 'runner',
+      'service.name': 'todo-service',
+      'service.version': '1.0.0',
+      'deployment.environment.name': 'local'
+    }
+  },
+  instrumentationScope: { name: 'todo-app', version: '1.0.0', schemaUrl: undefined },
+  traceId: '2ac745c2421478134bad864665fd52d8',
+  parentSpanContext: {
+    traceId: '2ac745c2421478134bad864665fd52d8',
+    spanId: 'aaf012c46172698e',
+    traceFlags: 1,
+    traceState: undefined
+  },
+  traceState: undefined,
+  name: 'todo.list',
+  id: 'efbea583e96638c6',
+  kind: 0,
+  timestamp: 1795230941720000,
+  duration: 6325.696,
+  attributes: { 'todo.count': 3 },
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{"timestamp":"2026-11-21T03:15:41.727Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo","route":"/todo","status":200,"duration_ms":7.195,"trace_id":"2ac745c2421478134bad864665fd52d8","span_id":"aaf012c46172698e"}
+{
+  resource: {
+    attributes: {
+      'host.name': 'ip-10-0-131-216',
+      'host.arch': 'amd64',
+      'host.id': 'ec270f328f8798eb144d5a22dc86da72',
+      'process.pid': 4219,
+      'process.executable.name': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.executable.path': '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+      'process.command_args': [
+        '/opt/hostedtoolcache/node/22.23.5/x64/bin/node',
+        '--require',
+        './tracing-console.js',
+        '/home/runner/work/a9-observability/a9-observability/index.js'
+      ],
+      'process.runtime.version': '22.23.5',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/runner/work/a9-observability/a9-observability/index.js',
+      'process.owner': 'runner',
+      'service.name': 'todo-service',
+      'service.version': '1.0.0',
+      'deployment.environment.name': 'local'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-http',
+    version: '0.200.0',
+    schemaUrl: undefined
+  },
+  traceId: '2ac745c2421478134bad864665fd52d8',
+  parentSpanContext: undefined,
+  traceState: undefined,
+  name: 'GET /todo',
+  id: 'aaf012c46172698e',
+  kind: 1,
+  timestamp: 1795230941718000,
+  duration: 8916.21,
+  attributes: {
+    'http.url': 'http://127.0.0.1:3000/todo',
+    'http.host': '127.0.0.1:3000',
+    'net.host.name': '127.0.0.1',
+    'http.method': 'GET',
+    'http.scheme': 'http',
+    'http.target': '/todo',
+    'http.user_agent': 'curl/8.5.0',
+    'http.flavor': '1.1',
+    'net.transport': 'ip_tcp',
+    'http.route': '/todo',
+    'net.host.ip': '::ffff:127.0.0.1',
+    'net.host.port': 3000,
+    'net.peer.ip': '::ffff:127.0.0.1',
+    'net.peer.port': 46410,
+    'http.status_code': 200,
+    'http.status_text': 'OK'
+  },
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  descriptor: {
+    name: 'http.server.duration',
+    type: 'HISTOGRAM',
+    description: 'Measures the duration of inbound HTTP requests.',
+    unit: 'ms',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 0,
+  dataPoints: [
+    {
+      attributes: {
+        'http.scheme': 'http',
+        'http.method': 'GET',
+        'net.host.name': '127.0.0.1',
+        'http.flavor': '1.1',
+        'http.status_code': 200,
+        'net.host.port': 3000
+      },
+      startTime: [ 1795230941, 727000000 ],
+      endTime: [ 1795230941, 730000000 ],
+      value: {
+        min: 9.759864,
+        max: 9.759864,
+        sum: 9.759864,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 0, 1, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'db.client.connections.usage',
+    type: 'UP_DOWN_COUNTER',
+    description: 'The number of connections that are currently in state described by the state attribute.',
+    unit: '{connection}',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 3,
+  dataPoints: [
+    {
+      attributes: { state: 'used', 'pool.name': 'mongodb://127.0.0.1:27017/test' },
+      startTime: [ 1795230941, 543000000 ],
+      endTime: [ 1795230941, 730000000 ],
+      value: 0
+    },
+    {
+      attributes: { state: 'idle', 'pool.name': 'mongodb://127.0.0.1:27017/test' },
+      startTime: [ 1795230941, 551000000 ],
+      endTime: [ 1795230941, 730000000 ],
+      value: 0
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'todo.http.requests',
+    type: 'COUNTER',
+    description: 'Completed HTTP requests, grouped by route and status',
+    unit: '{request}',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 3,
+  dataPoints: [
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230941, 727000000 ],
+      endTime: [ 1795230941, 730000000 ],
+      value: 1
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'todo.http.duration',
+    type: 'HISTOGRAM',
+    description: 'Time from entry into Express until the response finishes',
+    unit: 'ms',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 0,
+  dataPoints: [
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230941, 727000000 ],
+      endTime: [ 1795230941, 730000000 ],
+      value: {
+        min: 7.194769,
+        max: 7.194769,
+        sum: 7.194769,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 0, 1, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    }
+  ]
+}

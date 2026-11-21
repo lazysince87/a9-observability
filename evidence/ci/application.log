@@ -1,0 +1,362 @@
+{"event":"telemetry_started","traces":"otlp-http","metrics":"console","logs":"structured JSON console"}
+{"event":"server_started","port":3000,"service":"todo-service"}
+{"timestamp":"2026-11-21T03:15:42.175Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo","route":"/todo","status":200,"duration_ms":6.104,"trace_id":"678f0efa1d9ac724315608969ecd9d64","span_id":"f2e65dcbe80dc1ce"}
+{"timestamp":"2026-11-21T03:15:42.179Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo/1","route":"/todo/:id","status":200,"duration_ms":2.042,"trace_id":"5d714c4d6c864ad725b6b828b328bdf4","span_id":"21b0c50e5a58c462"}
+{"timestamp":"2026-11-21T03:15:42.181Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo","route":"/todo","status":200,"duration_ms":1.506,"trace_id":"28439f4b9ba97726afa77c385d24ced2","span_id":"ad35795f20ad1d4c"}
+{"timestamp":"2026-11-21T03:15:42.183Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo/2","route":"/todo/:id","status":200,"duration_ms":1.362,"trace_id":"02abe9dc03214d9898e4ad325e46058b","span_id":"21131c08cde76ca8"}
+{"timestamp":"2026-11-21T03:15:42.186Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo","route":"/todo","status":200,"duration_ms":1.479,"trace_id":"1bd090cbd7bc347f4fb06507cb2942a6","span_id":"8dd733aff3947f21"}
+{"timestamp":"2026-11-21T03:15:42.188Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo/3","route":"/todo/:id","status":200,"duration_ms":1.377,"trace_id":"55502b913d43d89b0e9bb2cdaac5eb32","span_id":"b82ae3f0258e7e0e"}
+{"timestamp":"2026-11-21T03:15:42.189Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo/999","route":"/todo/:id","status":404,"duration_ms":1.335,"trace_id":"054fc82796d84b7587ae44055fc2b29d","span_id":"f99269f6ef728d4f"}
+{"timestamp":"2026-11-21T03:15:42.191Z","level":"info","event":"http_request_completed","method":"GET","path":"/todo/invalid","route":"/todo/:id","status":400,"duration_ms":0.421,"trace_id":"7d517e72cea9b774f6d9ec8a714aea92","span_id":"4db517c009e6a103"}
+{
+  descriptor: {
+    name: 'http.server.duration',
+    type: 'HISTOGRAM',
+    description: 'Measures the duration of inbound HTTP requests.',
+    unit: 'ms',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 0,
+  dataPoints: [
+    {
+      attributes: {
+        'http.scheme': 'http',
+        'http.method': 'GET',
+        'net.host.name': '127.0.0.1',
+        'http.flavor': '1.1',
+        'http.status_code': 200,
+        'net.host.port': 3000
+      },
+      startTime: [ 1795230942, 175000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 1.626816,
+        max: 8.460877,
+        sum: 17.965695,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 5, 1, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 6
+      }
+    },
+    {
+      attributes: {
+        'http.scheme': 'http',
+        'http.method': 'GET',
+        'net.host.name': '127.0.0.1',
+        'http.flavor': '1.1',
+        'http.status_code': 404,
+        'net.host.port': 3000
+      },
+      startTime: [ 1795230942, 190000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 1.623768,
+        max: 1.623768,
+        sum: 1.623768,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 1, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    },
+    {
+      attributes: {
+        'http.scheme': 'http',
+        'http.method': 'GET',
+        'net.host.name': '127.0.0.1',
+        'http.flavor': '1.1',
+        'http.status_code': 400,
+        'net.host.port': 3000
+      },
+      startTime: [ 1795230942, 191000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 0.690855,
+        max: 0.690855,
+        sum: 0.690855,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 1, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'http.client.duration',
+    type: 'HISTOGRAM',
+    description: 'Measures the duration of outbound HTTP requests.',
+    unit: 'ms',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 0,
+  dataPoints: [
+    {
+      attributes: {
+        'http.method': 'POST',
+        'net.peer.name': '127.0.0.1',
+        'net.peer.port': 4318,
+        'http.status_code': 200,
+        'http.flavor': '1.1'
+      },
+      startTime: [ 1795230943, 181000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 5.749564,
+        max: 5.749564,
+        sum: 5.749564,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 0, 1, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'db.client.connections.usage',
+    type: 'UP_DOWN_COUNTER',
+    description: 'The number of connections that are currently in state described by the state attribute.',
+    unit: '{connection}',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 3,
+  dataPoints: [
+    {
+      attributes: { state: 'used', 'pool.name': 'mongodb://127.0.0.1:27017/test' },
+      startTime: [ 1795230941, 964000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 0
+    },
+    {
+      attributes: { state: 'idle', 'pool.name': 'mongodb://127.0.0.1:27017/test' },
+      startTime: [ 1795230941, 966000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 0
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'todo.http.requests',
+    type: 'COUNTER',
+    description: 'Completed HTTP requests, grouped by route and status',
+    unit: '{request}',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 3,
+  dataPoints: [
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230942, 175000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 3
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230942, 179000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 3
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 404
+      },
+      startTime: [ 1795230942, 189000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 1
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 400
+      },
+      startTime: [ 1795230942, 191000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: 1
+    }
+  ]
+}
+{
+  descriptor: {
+    name: 'todo.http.duration',
+    type: 'HISTOGRAM',
+    description: 'Time from entry into Express until the response finishes',
+    unit: 'ms',
+    valueType: 1,
+    advice: {}
+  },
+  dataPointType: 0,
+  dataPoints: [
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230942, 175000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 1.479308,
+        max: 6.104358,
+        sum: 9.089546,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 2, 1, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 3
+      }
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 200
+      },
+      startTime: [ 1795230942, 179000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 1.362355,
+        max: 2.041586,
+        sum: 4.780861,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 3, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 3
+      }
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 404
+      },
+      startTime: [ 1795230942, 189000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 1.335498,
+        max: 1.335498,
+        sum: 1.335498,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 1, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    },
+    {
+      attributes: {
+        'http.request.method': 'GET',
+        'http.route': '/todo/:id',
+        'http.response.status_code': 400
+      },
+      startTime: [ 1795230942, 191000000 ],
+      endTime: [ 1795230946, 941000000 ],
+      value: {
+        min: 0.421253,
+        max: 0.421253,
+        sum: 0.421253,
+        buckets: {
+          boundaries: [
+               0,    5,    10,   25,
+              50,   75,   100,  250,
+             500,  750,  1000, 2500,
+            5000, 7500, 10000
+          ],
+          counts: [
+            0, 1, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
+          ]
+        },
+        count: 1
+      }
+    }
+  ]
+}

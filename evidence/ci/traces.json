@@ -1,0 +1,2345 @@
+{
+  "data": [
+    {
+      "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+      "spans": [
+        {
+          "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+          "spanID": "b3fce2bbb167b3e0",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+              "spanID": "1ca6e571f295e289"
+            }
+          ],
+          "startTime": 1795230942186000,
+          "duration": 540,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{\"id\":\"?\"},\"projection\":{\"_id\":\"?\"},\"limit\":\"?\",\"singleBatch\":\"?\",\"batchSize\":\"?\"}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+          "spanID": "1ca6e571f295e289",
+          "operationName": "todo.get",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+              "spanID": "b82ae3f0258e7e0e"
+            }
+          ],
+          "startTime": 1795230942186000,
+          "duration": 1264,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.id",
+              "type": "string",
+              "value": "3"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "55502b913d43d89b0e9bb2cdaac5eb32",
+          "spanID": "b82ae3f0258e7e0e",
+          "operationName": "GET /todo/:id",
+          "references": [],
+          "startTime": 1795230942186000,
+          "duration": 1590,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo/:id"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo/3"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo/3"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "054fc82796d84b7587ae44055fc2b29d",
+      "spans": [
+        {
+          "traceID": "054fc82796d84b7587ae44055fc2b29d",
+          "spanID": "6801775ec5c0e89e",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "054fc82796d84b7587ae44055fc2b29d",
+              "spanID": "259e89fbe29aa131"
+            }
+          ],
+          "startTime": 1795230942188000,
+          "duration": 458,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{\"id\":\"?\"},\"projection\":{\"_id\":\"?\"},\"limit\":\"?\",\"singleBatch\":\"?\",\"batchSize\":\"?\"}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "054fc82796d84b7587ae44055fc2b29d",
+          "spanID": "259e89fbe29aa131",
+          "operationName": "todo.get",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "054fc82796d84b7587ae44055fc2b29d",
+              "spanID": "f99269f6ef728d4f"
+            }
+          ],
+          "startTime": 1795230942188000,
+          "duration": 1231,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1795230942188904,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "todo_not_found"
+                },
+                {
+                  "key": "todo.id",
+                  "type": "string",
+                  "value": "999"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "054fc82796d84b7587ae44055fc2b29d",
+          "spanID": "f99269f6ef728d4f",
+          "operationName": "GET /todo/:id",
+          "references": [],
+          "startTime": 1795230942188000,
+          "duration": 1585,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo/:id"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 404
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "NOT FOUND"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo/999"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo/999"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "7d517e72cea9b774f6d9ec8a714aea92",
+      "spans": [
+        {
+          "traceID": "7d517e72cea9b774f6d9ec8a714aea92",
+          "spanID": "e5abbac4fb2b78df",
+          "operationName": "todo.get",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "7d517e72cea9b774f6d9ec8a714aea92",
+              "spanID": "4db517c009e6a103"
+            }
+          ],
+          "startTime": 1795230942190000,
+          "duration": 609,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1795230942190015,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "invalid_todo_id"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "7d517e72cea9b774f6d9ec8a714aea92",
+          "spanID": "4db517c009e6a103",
+          "operationName": "GET /todo/:id",
+          "references": [],
+          "startTime": 1795230942190000,
+          "duration": 654,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo/:id"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 400
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "BAD REQUEST"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo/invalid"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo/invalid"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "678f0efa1d9ac724315608969ecd9d64",
+      "spans": [
+        {
+          "traceID": "678f0efa1d9ac724315608969ecd9d64",
+          "spanID": "ec3e29614a8587d3",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "678f0efa1d9ac724315608969ecd9d64",
+              "spanID": "13e40f784f49ff84"
+            }
+          ],
+          "startTime": 1795230942170000,
+          "duration": 1353,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{},\"projection\":{\"_id\":\"?\"}}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "678f0efa1d9ac724315608969ecd9d64",
+          "spanID": "13e40f784f49ff84",
+          "operationName": "todo.list",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "678f0efa1d9ac724315608969ecd9d64",
+              "spanID": "f2e65dcbe80dc1ce"
+            }
+          ],
+          "startTime": 1795230942169000,
+          "duration": 5502,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.count",
+              "type": "int64",
+              "value": 3
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "678f0efa1d9ac724315608969ecd9d64",
+          "spanID": "f2e65dcbe80dc1ce",
+          "operationName": "GET /todo",
+          "references": [],
+          "startTime": 1795230942167000,
+          "duration": 7801,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+      "spans": [
+        {
+          "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+          "spanID": "293e749a2bdb46fe",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+              "spanID": "19fa7b1e7d9be3ae"
+            }
+          ],
+          "startTime": 1795230942178000,
+          "duration": 802,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{\"id\":\"?\"},\"projection\":{\"_id\":\"?\"},\"limit\":\"?\",\"singleBatch\":\"?\",\"batchSize\":\"?\"}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": [
+            "clock skew adjustment disabled; not applying calculated delta of -502.284µs"
+          ]
+        },
+        {
+          "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+          "spanID": "19fa7b1e7d9be3ae",
+          "operationName": "todo.get",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+              "spanID": "21b0c50e5a58c462"
+            }
+          ],
+          "startTime": 1795230942177000,
+          "duration": 1798,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.id",
+              "type": "string",
+              "value": "1"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "5d714c4d6c864ad725b6b828b328bdf4",
+          "spanID": "21b0c50e5a58c462",
+          "operationName": "GET /todo/:id",
+          "references": [],
+          "startTime": 1795230942177000,
+          "duration": 2361,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo/:id"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo/1"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo/1"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "28439f4b9ba97726afa77c385d24ced2",
+      "spans": [
+        {
+          "traceID": "28439f4b9ba97726afa77c385d24ced2",
+          "spanID": "9d9a4a0ab8faf586",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "28439f4b9ba97726afa77c385d24ced2",
+              "spanID": "7e966f18e668458b"
+            }
+          ],
+          "startTime": 1795230942180000,
+          "duration": 638,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{},\"projection\":{\"_id\":\"?\"}}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "28439f4b9ba97726afa77c385d24ced2",
+          "spanID": "7e966f18e668458b",
+          "operationName": "todo.list",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "28439f4b9ba97726afa77c385d24ced2",
+              "spanID": "ad35795f20ad1d4c"
+            }
+          ],
+          "startTime": 1795230942180000,
+          "duration": 1400,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.count",
+              "type": "int64",
+              "value": 3
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "28439f4b9ba97726afa77c385d24ced2",
+          "spanID": "ad35795f20ad1d4c",
+          "operationName": "GET /todo",
+          "references": [],
+          "startTime": 1795230942180000,
+          "duration": 1836,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "02abe9dc03214d9898e4ad325e46058b",
+      "spans": [
+        {
+          "traceID": "02abe9dc03214d9898e4ad325e46058b",
+          "spanID": "21131c08cde76ca8",
+          "operationName": "GET /todo/:id",
+          "references": [],
+          "startTime": 1795230942182000,
+          "duration": 1604,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo/:id"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo/2"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo/2"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "02abe9dc03214d9898e4ad325e46058b",
+          "spanID": "b4936bf3eed85070",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "02abe9dc03214d9898e4ad325e46058b",
+              "spanID": "2f0415d3620da026"
+            }
+          ],
+          "startTime": 1795230942182000,
+          "duration": 533,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{\"id\":\"?\"},\"projection\":{\"_id\":\"?\"},\"limit\":\"?\",\"singleBatch\":\"?\",\"batchSize\":\"?\"}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "02abe9dc03214d9898e4ad325e46058b",
+          "spanID": "2f0415d3620da026",
+          "operationName": "todo.get",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "02abe9dc03214d9898e4ad325e46058b",
+              "spanID": "21131c08cde76ca8"
+            }
+          ],
+          "startTime": 1795230942182000,
+          "duration": 1187,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.id",
+              "type": "string",
+              "value": "2"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+      "spans": [
+        {
+          "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+          "spanID": "8dd733aff3947f21",
+          "operationName": "GET /todo",
+          "references": [],
+          "startTime": 1795230942184000,
+          "duration": 1781,
+          "tags": [
+            {
+              "key": "http.flavor",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "http.host",
+              "type": "string",
+              "value": "127.0.0.1:3000"
+            },
+            {
+              "key": "http.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.scheme",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "http.status_text",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "http.target",
+              "type": "string",
+              "value": "/todo"
+            },
+            {
+              "key": "http.url",
+              "type": "string",
+              "value": "http://127.0.0.1:3000/todo"
+            },
+            {
+              "key": "net.host.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.host.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.host.port",
+              "type": "int64",
+              "value": 3000
+            },
+            {
+              "key": "net.peer.ip",
+              "type": "string",
+              "value": "::ffff:127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 46434
+            },
+            {
+              "key": "net.transport",
+              "type": "string",
+              "value": "ip_tcp"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-http"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.200.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+          "spanID": "daf1b1639ac4fd4d",
+          "operationName": "mongodb.find",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+              "spanID": "8dd14212e6998940"
+            }
+          ],
+          "startTime": 1795230942184000,
+          "duration": 549,
+          "tags": [
+            {
+              "key": "db.connection_string",
+              "type": "string",
+              "value": "mongodb://127.0.0.1:27017/todo"
+            },
+            {
+              "key": "db.mongodb.collection",
+              "type": "string",
+              "value": "todos"
+            },
+            {
+              "key": "db.name",
+              "type": "string",
+              "value": "todo"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "find"
+            },
+            {
+              "key": "db.statement",
+              "type": "string",
+              "value": "{\"find\":\"?\",\"filter\":{},\"projection\":{\"_id\":\"?\"}}"
+            },
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mongodb"
+            },
+            {
+              "key": "net.peer.name",
+              "type": "string",
+              "value": "127.0.0.1"
+            },
+            {
+              "key": "net.peer.port",
+              "type": "int64",
+              "value": 27017
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "@opentelemetry/instrumentation-mongodb"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "0.53.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+          "spanID": "8dd14212e6998940",
+          "operationName": "todo.list",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1bd090cbd7bc347f4fb06507cb2942a6",
+              "spanID": "8dd733aff3947f21"
+            }
+          ],
+          "startTime": 1795230942184000,
+          "duration": 1372,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "todo-app"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "todo.count",
+              "type": "int64",
+              "value": 3
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "todo-service",
+          "tags": [
+            {
+              "key": "deployment.environment.name",
+              "type": "string",
+              "value": "local"
+            },
+            {
+              "key": "host.arch",
+              "type": "string",
+              "value": "amd64"
+            },
+            {
+              "key": "host.id",
+              "type": "string",
+              "value": "ec270f328f8798eb144d5a22dc86da72"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ip-10-0-131-216"
+            },
+            {
+              "key": "process.command",
+              "type": "string",
+              "value": "/home/runner/work/a9-observability/a9-observability/index.js"
+            },
+            {
+              "key": "process.command_args",
+              "type": "string",
+              "value": "[\"/opt/hostedtoolcache/node/22.23.5/x64/bin/node\",\"--require\",\"./tracing.js\",\"/home/runner/work/a9-observability/a9-observability/index.js\"]"
+            },
+            {
+              "key": "process.executable.name",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.executable.path",
+              "type": "string",
+              "value": "/opt/hostedtoolcache/node/22.23.5/x64/bin/node"
+            },
+            {
+              "key": "process.owner",
+              "type": "string",
+              "value": "runner"
+            },
+            {
+              "key": "process.pid",
+              "type": "int64",
+              "value": 4234
+            },
+            {
+              "key": "process.runtime.description",
+              "type": "string",
+              "value": "Node.js"
+            },
+            {
+              "key": "process.runtime.name",
+              "type": "string",
+              "value": "nodejs"
+            },
+            {
+              "key": "process.runtime.version",
+              "type": "string",
+              "value": "22.23.5"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 0,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}

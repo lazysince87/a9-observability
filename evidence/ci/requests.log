@@ -1,0 +1,9 @@
+{"path":"/todo","status":200,"body":[{"id":"1","title":"Buy groceries"},{"id":"2","title":"Install Aspecto"},{"id":"3","title":"buy my own name domain"}]}
+{"path":"/todo/1","status":200,"body":{"id":"1","title":"Buy groceries"}}
+{"path":"/todo","status":200,"body":[{"id":"1","title":"Buy groceries"},{"id":"2","title":"Install Aspecto"},{"id":"3","title":"buy my own name domain"}]}
+{"path":"/todo/2","status":200,"body":{"id":"2","title":"Install Aspecto"}}
+{"path":"/todo","status":200,"body":[{"id":"1","title":"Buy groceries"},{"id":"2","title":"Install Aspecto"},{"id":"3","title":"buy my own name domain"}]}
+{"path":"/todo/3","status":200,"body":{"id":"3","title":"buy my own name domain"}}
+{"path":"/todo/999","status":404,"body":{"error":"Todo not found"}}
+{"path":"/todo/invalid","status":400,"body":{"error":"Todo id must be a positive integer"}}
+Verified all 8 requests: 6 returned 200, 1 returned 404, 1 returned 400.
